@@ -53,22 +53,22 @@ if response.status_code == 200:
     df = pd.DataFrame(pokemon_list)
 
 #Saves Data With HTML File
-    #html_path = "pokemonHTML.html"
-    #df.to_html(html_path, index=False)
+    html_path = "pokemonHTML.html"
+    df.to_html(html_path, index=False)
 
-    #print(f"HTML File Saved Successfully in: {html_path}")
+    print(f"HTML File Saved Successfully in: {html_path}")
 
 #Saves Data With CSV File
-    #csv_path = "pokemonCSV.csv"
-    #df.to_csv(csv_path, index=False, encoding='utf-8-sig')
+    csv_path = "pokemonCSV.csv"
+    df.to_csv(csv_path, index=False, encoding='utf-8-sig')
 
-    #print(f"CSV File Saved Successfully in: {csv_path}")
+    print(f"CSV File Saved Successfully in: {csv_path}")
 
 #Saves Data With JSON File
-    #json_path = "pokemonJSON.json"
-    #df.to_json(json_path, orient='records', force_ascii=False, indent=2)
+    json_path = "pokemonJSON.json"
+    df.to_json(json_path, orient='records', force_ascii=False, indent=2)
 
-    #print(f"JSON File Saved Successfully in: {json_path}")
+    print(f"JSON File Saved Successfully in: {json_path}")
 
 #Saves Data With Excel File
     excel_path = "pokemonExcel.xlsx"
