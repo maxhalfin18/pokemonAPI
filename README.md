@@ -1,62 +1,69 @@
-# Max and Tom Pokémon Project
+# Max and Tom Pokémon Data Project
 
-A data science and image processing project analyzing Pokémon data through statistical exploration and basic machine learning techniques.
+This project collects, processes, and presents data from the official PokéAPI. It includes the full Pokémon dataset and saves it into multiple formats, including visual and audio assets.
 
-## Project Overview
+## Project Structure
 
-This project includes:
-
-- Processing a dataset of Pokémon with various attributes (type, height, weight, etc.)
-- Generating an average image from a folder of Pokémon-related photos
-- Visualizing and analyzing data using Pandas and Matplotlib
-- Applying clustering (K-Means) to identify patterns in Pokémon features
-
-## Folder Structure
-
+```
 maxandtomPokemonProject/
-pokemonCSV.csv          # Pokémon dataset (CSV format)
-images/                 # Folder containing Pokémon-related images
-average_image.png       # Output: average of all images
-main.ipynb              # Jupyter Notebook with full analysis
-main.py                 # Python script version (optional)
+├── pokemon.py              # Main script that fetches, processes, and saves Pokémon data
+├── pokemonCSV.csv          # Dataset in CSV format
+├── pokemonExcel.xlsx       # Dataset in Excel format
+├── pokemonHTML.html        # Dataset rendered in HTML table format
+├── pokemonJSON.json        # Dataset in JSON format
+├── pokemonTXT.txt          # Text file with line-by-line Pokémon data
+├── sprites/                # Folder with downloaded Pokémon images (.png)
+├── cries/                  # Folder with Pokémon sound files (.ogg)
+```
 
-## Setup Instructions
+## Features
 
-1. Clone the repository or download the files.
-2. Make sure you have Python 3.7+ installed.
-3. Install the required libraries:
+- Fetches up to 1310 Pokémon entries from the PokéAPI.
+- Parses and processes various Pokémon attributes: height, weight, stats, abilities, types, moves, encounters, images, and cries.
+- Generates output files in:
+  - HTML
+  - CSV
+  - JSON
+  - Excel
+  - Plain Text
+- Downloads:
+  - Sprite images for each Pokémon into the `sprites/` folder
+  - Sound cries (legacy and latest) into the `cries/` folder
+- Renders HTML previews for audio and image content.
 
-pip install numpy pandas matplotlib pillow scikit-learn
+## Requirements
 
-4. Run the notebook:
+Make sure you have Python 3.7+ and install required libraries:
 
-jupyter notebook main.ipynb
+```bash
+pip install requests pandas openpyxl
+```
 
-Or, run the Python script if you prefer:
+## How to Run
 
-python main.py
+```bash
+python pokemon.py
+```
 
-## Technologies Used
+This will:
+- Fetch data from the PokéAPI
+- Save datasets in multiple formats
+- Download related images and audio clips
 
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- Pillow (PIL)
-- Scikit-Learn (KMeans)
-- Jupyter Notebook
+## Data Fields
 
-## Example Output
+Each Pokémon record includes:
+- Basic stats: `id`, `name`, `height`, `weight`, `base_experience`
+- Gameplay data: `abilities`, `types`, `moves`, `held_items`
+- Media: `sprites` (image), `cries` (audio)
+- Encounter locations and past abilities/types
 
-The script produces an average image from all photos and performs clustering on numerical features in the dataset.
+## Output Examples
 
-## Authors
+- Example image: `sprites/bulbasaur.png`
+- Example audio: `cries/bulbasaur_legacy.ogg`, `cries/bulbasaur_latest.ogg`
+- HTML output: `pokemonHTML.html`
+
+## Author
 
 - Maximus Prime
-- Tom
-
-## Notes
-
-- Ensure that the image files are properly formatted (e.g., `.jpg`, `.png`) and located in the correct folder.
-- The dataset was provided as part of a course exercise and may require preprocessing for certain analyses.
-- Clustering results (e.g., KMeans SSE) may vary depending on initialization and number of iterations.
