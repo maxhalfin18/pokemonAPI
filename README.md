@@ -66,4 +66,5 @@ Each Pokémon record includes:
 
 ## Author
 
-- Maximus Prime
+- Max Halfin
+- Tom Shvartz
