@@ -14,11 +14,11 @@ This project includes:
 ## Folder Structure
 
 maxandtomPokemonProject/
-├── pokemonCSV.csv          # Pokémon dataset (CSV format)
-├── images/                 # Folder containing Pokémon-related images
-├── average_image.png       # Output: average of all images
-├── main.ipynb              # Jupyter Notebook with full analysis
-└── main.py                 # Python script version (optional)
+pokemonCSV.csv          # Pokémon dataset (CSV format)
+images/                 # Folder containing Pokémon-related images
+average_image.png       # Output: average of all images
+main.ipynb              # Jupyter Notebook with full analysis
+main.py                 # Python script version (optional)
 
 ## Setup Instructions
 
