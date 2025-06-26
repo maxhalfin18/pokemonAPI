@@ -1,5 +1,7 @@
 # Max and Tom Pokémon Data Project
 
+[Run this project in Colab](https://colab.research.google.com/drive/11piEEIaGOqQmcQ_t_JRdTtRg7aJajfoF?usp=sharing)
+
 This project collects, processes, and presents data from the official PokéAPI. It includes the full Pokémon dataset and saves it into multiple formats, including visual and audio assets.
 
 ## Project Structure
